@@ -4,7 +4,7 @@ program main
    use other_routines
    implicit none
 
-   ! variables passed on to the spsa and fdsa outines:
+   ! variables passed on to the spsa and fdsa routines:
    real(kind=8), allocatable, dimension(:) :: guess
    real(kind=8) a, c, alpha, gama ! the gain coefficients
    real(kind=8) :: convergence ! convergence criteria
