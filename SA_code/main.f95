@@ -7,7 +7,7 @@ program main
    ! variables passed on to the spsa and fdsa routines:
    real(kind=8), allocatable, dimension(:) :: guess
    real(kind=8) a, c, alpha, gama ! the gain coefficients
-   real(kind=8) :: convergence ! convergence criteria
+   real(kind=8) :: convergence ! |E_old - E_new|
    real(kind=8) :: B_multiplier ! B = B_multiplier * niter
    integer :: niter ! maximum number of iterations
    integer :: select_function, run_number
@@ -46,9 +46,10 @@ program main
    integer :: i
 
    ! the program can produce filenames ending in *00-*99. This is good
-   ! for systematically testing the effect of the different coefficients
-   ! on the convergence of the optimization procedure, while saving
-   ! everything in the same folder for easy comparison:
+   ! for systematically testing the effect of different choices of 
+   ! coefficients for the algorithms on the convergence of the 
+   ! optimization procedure, while saving everything in the same folder 
+   ! for easy comparison:
    write(*,*) 'what run is this? [0-99]'
    read(*,*) run_number
 
@@ -93,7 +94,7 @@ program main
    !--------------------------------------
    ! read the coefficients and the 
    ! control variables for the 
-   ! proceduresfrom the input file:
+   ! procedures from the input file:
    !--------------------------------------
 
    ! define the name of the input file that contains the coefficients
@@ -105,7 +106,7 @@ program main
       write (inputname, "(A5,I2)") 'coeff', run_number
    end if
 
-   ! read from the input file:
+   ! read from that file:
    open (unit=1, file=inputname, status='old', action='read')
 
    read(1,*) name1, a
@@ -131,7 +132,7 @@ program main
    ! call optimization procedure:
    !-------------------------------------
 
-   ! define the name of the file where the gradient at each
+   ! define the name of the output file where the gradient at each
    ! iteration, as well as the total number of iterations
    ! and the final value L_new - L_old are written:
    if ( (run_number .ge. 0) .and. (run_number .le. 9) ) then
@@ -147,8 +148,7 @@ program main
    write(9,*)
 
    ! define the name of the outputfile that can be used to plot
-   ! the value of the objective function at each step in the
-   ! optimization:
+   ! the result of the optimization procedure:
    if ( (run_number .ge. 0) .and. (run_number .le. 9) ) then
       write (filename, "(A1,I1,A1,I1,I1)") 'f', select_function, '_', 0, &
          run_number

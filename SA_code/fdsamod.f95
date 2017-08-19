@@ -1,6 +1,6 @@
 
 !-----------------------------------------
-! Implementation of the fdSA algorithm:
+! Implementation of the FDSA algorithm:
 !-----------------------------------------
 
 module fdsa_routine
