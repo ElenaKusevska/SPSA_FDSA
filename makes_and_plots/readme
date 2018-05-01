@@ -1,0 +1,10 @@
+instead of a makefile. Works well for me when using Fortran.
+
+Add following lines to .bashrc:
+
+alias plot='/home/.../plot.sh'
+alias compile1='/home/.../compile1.sh'
+alias compile2='/home/.../compile2.sh'
+alias clean='/home/.../clean.sh'
+
+there are example gnuscript in axample runs

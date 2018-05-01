@@ -1,0 +1,9 @@
+a:                                7.0
+c:                                0.000001
+niters:                           1700
+method:                           spsa
+function:                         1
+convergence:                      0.000000001
+B_multiplier:                     0.9 
+random_number_distribution:       bern_dist
+use_stability_constant_B:         Y

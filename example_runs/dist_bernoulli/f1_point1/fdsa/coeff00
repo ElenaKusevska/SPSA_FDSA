@@ -1,0 +1,8 @@
+a:                                6
+c:                                1
+niters:                           300
+method:                           fdsa
+function:                         1
+convergence:                      0.000000001
+random_number_distribution:       bern_dist
+define a in terms of max niters:  Y

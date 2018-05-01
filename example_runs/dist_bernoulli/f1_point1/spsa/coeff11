@@ -1,0 +1,7 @@
+a:                             1
+c:                             0.000001
+niters:                        700
+method:                        spsa
+function:                      1
+convergence:                   0.000000001
+random_number_distribution:    bern_dist

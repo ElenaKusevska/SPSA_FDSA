@@ -1,0 +1,24 @@
+set terminal x11 persist
+set xrange [-17:4]
+set yrange [-7:2]
+#set zrange [0:0.3]
+set pm3d
+set isosamples 40
+set pal gray
+set xlabel "x"
+set ylabel "y"
+set zlabel "f1"
+splot (( sin(x)**2 + cos(y)**2 ) / ( 5.0 + x**2 + y**2 )), "f07" with points pointsize 1 pointtype 12, "f07_last" with points pointsize 1 pointtype 13 lc rgb(215,66,244)
+
+
+#set palette rgb 7,5,15; set title "traditional pm3d\n(black-blue-red-yellow)"; splot g(x)
+#set palette rgb 3,11,6; set title "green-red-violet"; splot g(x)
+#set palette rgb 23,28,3; set title "ocean (green-blue-white)\ntry also other permutations"; splot g(x)
+#set palette rgb 21,22,23; set title "hot (black-red-yellow-white)"; splot g(x)
+#set palette rgb 30,31,32; set title "color printable on gray\n(black-blue-violet-yellow-white)"; splot g(x)
+#set palette rgb 33,13,10; set title "rainbow (blue-green-yellow-red)"; splot g(x)
+#set palette rgb 34,35,36; set title "AFM hot (black-red-yellow-white)"; splot g(x)
+#set palette model HSV
+#set palette rgb 3,2,2; set title "HSV model\n(red-yellow-green-cyan-blue-magenta-red)"; splot g(x)
+#set pal gray; set title "gray palette"; splot g(x)
+

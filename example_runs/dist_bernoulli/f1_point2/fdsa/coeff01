@@ -1,0 +1,6 @@
+a:                                14.0
+c:                                0.000001
+niters:                           1000
+method:                           fdsa
+function:                         1
+convergence:                      0.000000001

@@ -1,0 +1,7 @@
+a:                             9
+c:                             1
+niters:                        1000
+method:                        fdsa
+function:                      1
+convergence:                   0.000000001
+random_number_distribution:    bern_dist

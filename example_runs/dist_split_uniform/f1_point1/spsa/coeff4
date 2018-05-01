@@ -1,0 +1,10 @@
+a:                             8.5
+c:                             0.000001
+guess1:                       -2.2
+guess2:                       -0.3
+function:                      1
+convergence:                   0.000000001
+niters:                        2000
+output:                        f04
+method:                        spsa
+random_number_distribution:    split_uni
